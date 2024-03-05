@@ -25,6 +25,8 @@ class AppFlow: NavigationFlowController, AppFlowProtocol {
         switch destination {
         case .splash:
             push(viewController: dependency.viewFactory.makeSplash(dependency: dependency), animated: animated)
+        case .home:
+            push(viewController: dependency.viewFactory.makeHome(), animated: animated)
         }
     }
 

@@ -13,7 +13,8 @@ protocol NavigatorProtocol {
 
 class Navigator: NavigatorProtocol {
     enum Destination {
-        case splash        
+        case splash   
+        case home
     }
     
     static let shared = Navigator()

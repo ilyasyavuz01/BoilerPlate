@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SplashBusinessLogic {
-    func handle(request: Splash.Something.Request)
+    func handle(request: Splash.RouteToHome.Request)
 }
 
 class SplashInteractor: SplashBusinessLogic {
@@ -17,8 +17,11 @@ class SplashInteractor: SplashBusinessLogic {
     
     // MARK: Business Logic
 
-    func handle(request: Splash.Something.Request) {
-        let response = Splash.Something.Response()
-        presenter?.present(response: response)
+    func handle(request: Splash.RouteToHome.Request) {
+        let seconds = 2.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.presenter?.present(response: Splash.RouteToHome.Response())
+        }
+
     }
 }

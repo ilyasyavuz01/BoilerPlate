@@ -1,17 +1,17 @@
 //
-//  SplashModels.swift
+//  HomeModels.swift
 //  BoilerPlate
 //
-//  Created by ilyas Y on 15.02.2024.
+//  Created by ilyas Y on 5.03.2024.
 //  Copyright (c) 2024 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-enum Splash {
+enum Home {
     
     // MARK: Use cases
-    enum RouteToHome {
+    enum Something {
         struct Request {
         }
         struct Response {

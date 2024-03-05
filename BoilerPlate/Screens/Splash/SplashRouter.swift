@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SplashRoutingLogic {
-    func routeToSomeWhere()
+    func routeToHome()
 }
 
 class SplashRouter: NSObject, SplashRoutingLogic {
@@ -17,7 +17,8 @@ class SplashRouter: NSObject, SplashRoutingLogic {
 
     // MARK: Routing Logic
     
-    func routeToSomeWhere() {
-        
+    func routeToHome() {
+        let flow: AppFlowProtocol? = viewController?.flow()
+        flow?.route(to: .home, animated: true)
     }
 }

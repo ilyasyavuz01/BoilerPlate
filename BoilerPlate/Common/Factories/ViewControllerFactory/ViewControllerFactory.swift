@@ -9,6 +9,7 @@ import UIKit
 
 protocol ViewControllerFactoryProtocol {
     func makeSplash(dependency: DependencyFactoryProtocol) -> UIViewController
+    func makeHome() -> UIViewController
 }
 
 struct ViewControllerFactory: ViewControllerFactoryProtocol {
@@ -21,6 +22,19 @@ struct ViewControllerFactory: ViewControllerFactoryProtocol {
         let interactor = SplashInteractor()
         let presenter = SplashPresenter()
         let router = SplashRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        return viewController
+    }
+    
+    func makeHome() -> UIViewController {
+        let viewController = HomeViewController(nibName: "HomeView", bundle: nil)
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter()
+        let router = HomeRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter

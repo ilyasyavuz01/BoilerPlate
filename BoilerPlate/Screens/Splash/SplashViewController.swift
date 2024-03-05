@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SplashDisplayLogic: AnyObject {
-    func display(viewModel: Splash.Something.ViewModel)
+    func display(viewModel: Splash.RouteToHome.ViewModel)
 }
 
 class SplashViewController: UIViewController, SplashDisplayLogic {
@@ -20,13 +20,13 @@ class SplashViewController: UIViewController, SplashDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = Splash.Something.Request()
+        let request = Splash.RouteToHome.Request()
         interactor?.handle(request: request)
     }
 
     // MARK: Requests
 
-    func display(viewModel: Splash.Something.ViewModel) {
-    
+    func display(viewModel: Splash.RouteToHome.ViewModel) {
+        router?.routeToHome()
     }
 }

@@ -53,43 +53,7 @@ class NavigationFlowController: FlowController, UINavigationControllerDelegate {
             )
         }
     }
-    
-//    func push(fromMain viewController: UIViewController, animated: Bool, selectedIndex: Int) {
-//        // Pop previous views with same class
-//        if let previous: MainFlow = navigation.viewControllers.first(where: { controller in
-//            type(of: controller) == type(of: viewController)}) as? MainFlow {
-//            navigation.popToViewController(previous, animated: animated)
-//            previous.controller.selectedIndex = selectedIndex
-//            guard let mainTabbar = previous.controller as? MainTabBarViewController else { return }
-//            mainTabbar.updateSelection()
-//        } else {
-//            // Set Root View Controller
-//            navigation.setViewControllers([viewController], animated: true)
-//        }
-//    }
-    
-//    func pushModal(viewController: UIViewController, animated: Bool, heightRatio: CGFloat? = nil, isPan: Bool, isPanEnabled: Bool = true) {
-//        // Remove previous views with same class
-//        navigation.viewControllers = navigation.viewControllers.filter { controller in
-//            type(of: controller) != type(of: viewController)
-//        }
-//        
-//        let transitioningDelegate = ModalTransitioningDelegate(
-//            to: viewController,
-//            height: CGFloat(UIScreen.main.bounds.height) * (heightRatio ?? 3/4),
-//            isPan: isPan,
-//            isPanEnabled: isPanEnabled
-//        )
-//        
-//        transitioningDelegate.interactiveDismiss = false
-//        viewController.view.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 10)
-//        viewController.modalPresentationStyle = .custom
-//        viewController.transitioningDelegate = transitioningDelegate
-//        
-//        // Push view
-//        navigation.present(viewController, animated: true, completion: nil)
-//    }
-    
+
     func pushEndless(viewController: UIViewController, animated: Bool) {
         // Connect Flows navigation gesture to each other.
         if let flowing = viewController as? NavigationFlowController {

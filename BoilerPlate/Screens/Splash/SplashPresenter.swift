@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SplashPresentationLogic {
-    func present(response: Splash.Something.Response)
+    func present(response: Splash.RouteToHome.Response)
 }
 
 class SplashPresenter: SplashPresentationLogic {
@@ -17,8 +17,8 @@ class SplashPresenter: SplashPresentationLogic {
 
     // MARK: Presentation Logic
     
-    func present(response: Splash.Something.Response) {
-        let viewModel = Splash.Something.ViewModel()
+    func present(response: Splash.RouteToHome.Response) {
+        let viewModel = Splash.RouteToHome.ViewModel()
         viewController?.display(viewModel: viewModel)
     }
 }
