@@ -24,7 +24,6 @@
 		1815A2D52B971F1F00D76C8D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815A2CF2B971F1F00D76C8D /* HomeInteractor.swift */; };
 		1815A2D62B971F1F00D76C8D /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1815A2D02B971F1F00D76C8D /* HomeView.xib */; };
 		184305012B6CF2EB002E842B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184305002B6CF2EB002E842B /* AppDelegate.swift */; };
-		184305082B6CF2EB002E842B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184305062B6CF2EB002E842B /* Main.storyboard */; };
 		1843050A2B6CF2EB002E842B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184305092B6CF2EB002E842B /* Assets.xcassets */; };
 		1843050D2B6CF2EB002E842B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1843050B2B6CF2EB002E842B /* LaunchScreen.storyboard */; };
 		1843051F2B6CF364002E842B /* RemoteDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184305152B6CF364002E842B /* RemoteDecoder.swift */; };
@@ -75,7 +74,6 @@
 		1815A2D02B971F1F00D76C8D /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		184304FD2B6CF2EB002E842B /* BoilerPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184305002B6CF2EB002E842B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		184305072B6CF2EB002E842B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184305092B6CF2EB002E842B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1843050C2B6CF2EB002E842B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1843050E2B6CF2EB002E842B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,12 +132,12 @@
 		1815A2CA2B971F1400D76C8D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1815A2CF2B971F1F00D76C8D /* HomeInteractor.swift */,
+				1815A2CD2B971F1F00D76C8D /* HomeModels.swift */,
 				1815A2CB2B971F1F00D76C8D /* HomePresenter.swift */,
 				1815A2CC2B971F1F00D76C8D /* HomeRouter.swift */,
-				1815A2CD2B971F1F00D76C8D /* HomeModels.swift */,
-				1815A2CE2B971F1F00D76C8D /* HomeViewController.swift */,
-				1815A2CF2B971F1F00D76C8D /* HomeInteractor.swift */,
 				1815A2D02B971F1F00D76C8D /* HomeView.xib */,
+				1815A2CE2B971F1F00D76C8D /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 				184305322B6CFB3C002E842B /* Fonts */,
 				1843050E2B6CF2EB002E842B /* Info.plist */,
 				1843052E2B6CF7F9002E842B /* Libraries */,
-				184305062B6CF2EB002E842B /* Main.storyboard */,
 				184305392B6CFC73002E842B /* R */,
 				184305302B6CF827002E842B /* Screens */,
 			);
@@ -241,12 +238,12 @@
 		184305312B6CF842002E842B /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				189901322B7EAAC90074B80E /* SplashInteractor.swift */,
+				189901302B7EAAC90074B80E /* SplashModels.swift */,
 				1899012E2B7EAAC90074B80E /* SplashPresenter.swift */,
 				1899012F2B7EAAC90074B80E /* SplashRouter.swift */,
-				189901302B7EAAC90074B80E /* SplashModels.swift */,
-				189901312B7EAAC90074B80E /* SplashViewController.swift */,
-				189901322B7EAAC90074B80E /* SplashInteractor.swift */,
 				189901332B7EAAC90074B80E /* SplashView.xib */,
+				189901312B7EAAC90074B80E /* SplashViewController.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -451,7 +448,6 @@
 				1843050D2B6CF2EB002E842B /* LaunchScreen.storyboard in Resources */,
 				189901392B7EAAC90074B80E /* SplashView.xib in Resources */,
 				1843050A2B6CF2EB002E842B /* Assets.xcassets in Resources */,
-				184305082B6CF2EB002E842B /* Main.storyboard in Resources */,
 				1815A2D62B971F1F00D76C8D /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,14 +507,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		184305062B6CF2EB002E842B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				184305072B6CF2EB002E842B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1843050B2B6CF2EB002E842B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -660,7 +648,7 @@
 				INFOPLIST_FILE = BoilerPlate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -689,7 +677,7 @@
 				INFOPLIST_FILE = BoilerPlate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -26,6 +26,7 @@ class AppFlow: NavigationFlowController, AppFlowProtocol {
         case .splash:
             push(viewController: dependency.viewFactory.makeSplash(dependency: dependency), animated: animated)
         case .home:
+            navigation.interactivePopGestureRecognizer?.isEnabled = false
             push(viewController: dependency.viewFactory.makeHome(), animated: animated)
         }
     }
